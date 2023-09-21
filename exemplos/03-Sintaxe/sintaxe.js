@@ -1,10 +1,10 @@
 // Comentário de 1 linha
 /*Bloco de comentário (Shift + ALT + a) */
 
-// alert("Olá, mundo!");
+alert("Aprendendo JS no SESI!!");
 
 console.log("Olá, mundo!"); // Exibido no: Inspecionar -> Console
-// document.write("Olá, mundo!");
+document.write("Olá, mundo!");
 
 /* Variáveis
 Palavras-chave: var, let e const
@@ -22,10 +22,13 @@ var curso = "Técnico em Desenvolvimento de sistemas"; // Variável global
 document.write('<h2 style="color: blue;">Recuperando valores e concatenação</h2><br>');
 // console.log(nome); 
 
+document.write("<strong>Meu nome é: </strong>" +nome+" <br>")
+document.write("<strong>Estamos no ano de: </strong>" +ano+" <br>")
+document.write("<strong>Meu curso preferido é: </strong>" +curso+" <br>")
 
-// 1ª Digitação (Aqui)
-
-
+// Concatenação Template literal (Crase)
+document.write(`Eu sou o: <strong>${nome}</strong> e em: <strong>${ano}</strong> 
+estou estudando no curso <strong>${curso}</strong>.<br>`)
 
 document.write("__________________________________________________________________<br>");
 
@@ -63,4 +66,4 @@ let quantidade = 3;
 let total = preco * quantidade;
 
 
-// 3ª Digitação (Aqui)
+document.write(`Temos atualmente no estoque o produto: <strong>${produto}</strong>`)
