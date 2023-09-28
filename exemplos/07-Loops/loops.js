@@ -56,7 +56,7 @@ let carros = [
 // Cache do tamanho array
 let tamanho = carros.length;
 
-for (let i = 0; i < tamanho; i++) {41
+for (let i = 0; i < tamanho; i++) {
     document.write(`O valor de carro [${i}] é: <strong>${carros[i]}</strong><br>`);
 }
 
