@@ -2,14 +2,14 @@
 
 
 // Encontre o elemento <img> pelo atributo alt
-const imgElement = document.querySelector('img[alt="DOM"]');
+// const imgElement = document.querySelector('img[alt="DOM"]');
 
 // Defina o caminho local da imagem
 // const caminhoLocal = 'img/A_Veloz.jpg';
-const caminhoLocal = 'img/B_Veloz.jpg';
+// const caminhoLocal = 'img/B_Veloz.jpg';
 
 // Altere o atributo src do elemento <img> para o caminho local
-imgElement.setAttribute('src', caminhoLocal);
+// imgElement.setAttribute('src', caminhoLocal);
 
 // ____________________________________________________________________________
 
@@ -22,16 +22,35 @@ querySelectorAll() -> seleciona VÁRIOS elementos de acordo com um seletor */
 // ____________________________________________________________________________
 // Modificando elementos
 
+// Selecionando pelo ID
+const titulo = document.getElementById('titulo-principal');
 
-// 1ª Digitação (Aqui)
+// Selecionando pela TAG
+const pagina = document.querySelector('body');
+
+// Selecionando todas as TAG's h2
+const subtitulo = document.querySelectorAll('h2');
+
+// Selecionando pela TAG 
+const legenda = document.querySelectorAll('figcaption');
 
 
 // ____________________________________________________________________________
 
 // Modificando elementos
 
+// H1
+titulo.textContent = "Olá Mundo!";
 
-// 2ª Digitação (Aqui)
+// Cor de fundo (Body)
+pagina.style.backgroundColor = "green";
+
+// Mudando o segundo h2
+subtitulo[1].textContent = "Full-Stack";
+
+// Mudando a legenda (figcaption)
+legenda.innerHTML = "<b>Velozes e furiosos</b>";
+
 
 
 // ____________________________________________________________________________
@@ -49,9 +68,9 @@ const subtitulos = document.querySelectorAll('h2');
 // Modifique a cor da fonte de todos os elementos <h2> para azul, por exemplo
 
 // Sintaxe (Arrow Function)
-// subtitulos.forEach(subtitulo => {
-//   subtitulo.style.color = 'blue';
-// });
+subtitulos.forEach(subtitulo => {
+  subtitulo.style.color = 'blue';
+});
 
 // Sintaxe For...of (Loop comum)
 // for (const subtitulo of subtitulos) {
@@ -64,15 +83,25 @@ const subtitulos = document.querySelectorAll('h2');
 // CSS vis JS (Tabela)
 
 // Modificar o texto do <h3> "Editores"
+const tituloEditores = document.querySelector('h3');
 
-
-// 3ª Digitação (Aqui)
+tituloEditores.textContent = 'Melhores Editores';
+tituloEditores.style.color = 'orange';
+tituloEditores.style.fontSize = '28px';
 
 
 // Adicionar um novo editor à lista:
 
 
-// 4ª Digitação (Aqui)
+const listaEditores = document.querySelector('#lista-editores');
+
+const novoEditor = document.createElement('li');
+novoEditor.textContent = 'Sublime';
+listaEditores.appendChild(novoEditor);
+
+// Alterando a cor do 3° item da lista
+const terceiroItem = listaEditores.querySelectorAll('li')[2];
+terceiroItem.style.color = 'orange';
 
 
 
